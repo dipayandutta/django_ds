@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-	Home
+	Sales List
 {% endblock %}
 
 {% block content %}
-	<h1>Hello World!</h1>
-	<p>{{ hello }}</p>
-{% endblock %}
+	Sales list
+<!--inheriting from a list view , displaying result in a class based view-->
+	{% for obj in object_list %}
+		{{ obj }}
+	{% endfor %}
+
+{% endblock content %}
